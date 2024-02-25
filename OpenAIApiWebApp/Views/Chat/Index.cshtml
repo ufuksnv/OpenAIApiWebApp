@@ -1,0 +1,22 @@
+﻿@model string
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h2>Mesajınızı Yazın (En Fazla 50 Kelime)</h2>
+
+<form method="post">
+    <input type="text" name="prompt" />
+    <button type="submit">Gönder</button>
+</form>
+
+@if (ViewBag.ErrorMessage != null)
+{
+    <p>@ViewBag.ErrorMessage</p>
+}
+
+@if (ViewBag.ResponseMessage != null)
+{
+    <p>@ViewBag.ResponseMessage</p>
+}
+
