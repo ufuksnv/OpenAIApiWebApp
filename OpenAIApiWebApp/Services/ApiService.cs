@@ -3,11 +3,13 @@ using Azure.AI.OpenAI;
 
 namespace OpenAIApiWebApp.Services
 {
-    public class ApiService
+    public class ApiService : IApiService
     {
 
         private readonly string _apiKey;
         private readonly OpenAIClient _openAIClient;
+
+        
 
         public ApiService(string apiKey)
         {
@@ -16,7 +18,7 @@ namespace OpenAIApiWebApp.Services
         }
 
         public async Task<string> SendApiMessage(string prompt)
-        {           
+        {
 
             var chatCompletionsOptions = new ChatCompletionsOptions()
             {

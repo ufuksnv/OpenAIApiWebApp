@@ -4,7 +4,7 @@ var builder = WebApplication.CreateBuilder(args);
 
 
 
-builder.Services.AddScoped<ApiService>(_ => new ApiService("YourApiKey"));
+builder.Services.AddScoped<ApiService>(_ => new ApiService("your key"));
 // Add services to the container.
 builder.Services.AddControllersWithViews();
 
